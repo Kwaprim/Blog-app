@@ -4,7 +4,7 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Sign Up Now</legend>
+                <legend class="border-bottom mb-4">Join Today</legend>
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
 
@@ -33,29 +33,29 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    {{ form.userPassword.label(class="form-control-label") }}
-                    {% if form.userPassword.errors %}
-                        {{ form.userPassword(class="form-control form-control-lg is-invalid") }}
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
-                            {% for error in form.userPassword.errors %}
+                            {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.userPassword(class="form-control form-control-lg") }}
+                        {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    {{ form.confirmPassword.label(class="form-control-label") }}
-                    {% if form.confirmPassword.errors %}
-                        {{ form.confirmPassword(class="form-control form-control-lg is-invalid") }}
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
-                            {% for error in form.confirmPassword.errors %}
+                            {% for error in form.confirm_password.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.confirmPassword(class="form-control form-control-lg") }}
+                        {{ form.confirm_password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
             </fieldset>
@@ -66,7 +66,7 @@
     </div>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="{{ url_for('signinpage') }}">Sign In</a>
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
         </small>
     </div>
 {% endblock content %}
