@@ -45,8 +45,8 @@ def register():
         
         # Creating and adding user to database
         user = User(username = form.username.data, email = form.email.data, password = hashed_password)
-        db.seesion.add(user)
-        db.commit()
+        db.session.add(user)
+        db.session.commit()
         
         flash(f'Account created successful! Login and start blogging', 'success')
         return redirect(url_for('login'))
