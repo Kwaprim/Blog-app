@@ -6,15 +6,15 @@ from flaskblog.models import User, Post
 
 posts = [
     {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
+        'author': 'Prince Millidah',
+        'title': 'Flask Blog Post 1',
+        'content': 'I have started learning Flask',
         'date_posted': 'April 20, 2018'
     },
     {
         'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
+        'title': 'Diss Prince',
+        'content': 'Well, I am not sure about this guy',
         'date_posted': 'April 21, 2018'
     }
 ]
